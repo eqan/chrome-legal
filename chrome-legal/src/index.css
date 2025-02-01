@@ -1,0 +1,27 @@
+.panel-chat .header-chat{
+	border-bottom:1px solid #ccc;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.panel-chat .message-chat input[type="submit"]{
+	position: absolute;
+	right: 20px;
+	border:1px solid #222;
+	top: 19px;
+	padding: 5px 20px;
+}
+.panel-chat .message-chat input[type="text"]{
+	width: calc(100% - 30px);
+	padding: 15px;
+	border:1px solid #ccc;
+}
+.panel-chat .message-chat{
+	position: absolute;
+	padding: 10px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #26ade4;
+}

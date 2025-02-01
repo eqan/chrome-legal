@@ -1,26 +1,13 @@
-const WebSocket = require('websocket').server;
-const http = require('http');
+const WebSocket = require('ws');
 
-const server = http.createServer((request, response) => {
-  // Handle HTTP requests here
-});
+const wss = new WebSocket.Server({ port: 3030 });
 
-const webSocketServer = new WebSocket({
-  httpServer: server,
-});
-
-webSocketServer.on('request', (request) => {
-  const connection = request.accept(null, request.origin);
-
-  connection.on('message', (message) => {
-    // Handle incoming WebSocket messages here
+wss.on('connection', function connection(ws) {
+  ws.on('message', function incoming(data) {
+    wss.clients.forEach(function each(client) {
+      if (client !== ws && client.readyState === WebSocket.OPEN) {
+        client.send(data);
+      }
+    });
   });
-
-  connection.on('close', (reasonCode, description) => {
-    // Handle WebSocket connection closure here
-  });
-});
-
-server.listen(3001, () => {
-  console.log('WebSocket server is listening on port 3001');
 });

@@ -8,9 +8,6 @@ function IndexSidePanel() {
         flexDirection: "column",
         padding: 16
       }}>
-      <h2>
-      Hi my name is Eqan
-      </h2>
       <App />
     </div>
   )
