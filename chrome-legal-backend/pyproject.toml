@@ -1,0 +1,11 @@
+[project]
+name = "chrome-legal-backend"
+version = "0.1.0"
+description = "Chrome Legal Backend"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.112.1",
+    "ruff>=0.9.4",
+    "websockets>=13.0",
+]
