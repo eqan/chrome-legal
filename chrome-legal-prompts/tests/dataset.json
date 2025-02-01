@@ -1,6 +1,14 @@
 [
   {
-    "input": "",
-    "expected_output": ""
+    "document_clauses": "Job Title and Place of Work: The Company will employ you as (INSERT JOB TITLE). You will be required to undertake such duties and responsibilities as may be determined by the Company from time to time. The Company reserves the right to vary your duties and responsibilities at any time and from time to time according to the needs of the Company’s business. During your employment you report NAME OF MANAGER. Your normal place of work is 4th Floor, 89 Great Eastern Street, London, EC2A 3HX. However, you may be required to work at any other place designated by the Employer. You may be required to travel within the United Kingdom or on reasonable notice, overseas, although you will not be required to work outside the United Kingdom for any period longer than one month. During your employment you shall at all times: promote the interests and further the business of the Employer and any other holding or subsidiary or associated company or undertaking of the Employer (as defined by the Companies Act) and of the Connect Ventures funds and/or any other fund or collective investment scheme managed by the Employer or subsidiary or associated company or related entity of the Employer (“Associated Undertaking”); not do or prevent there being done anything which may be prejudicial or detrimental to the business of the Employer and any other Associated Undertaking; devote all your available working hours, skill, attention and labour to the performance of your duties and carry out such duties as may reasonably be required of you by the Employer or any Associated Undertaking. Hours of Work and Overtime: The Company’s normal hours of work are from 9:00 am to 6:00 pm Monday to Friday with a one hour unpaid break for lunch. These hours will be your normal hours of work unless otherwise agreed between you and the Company. However, you may be required to work outside these hours in the course of performing your duties without further remuneration. The Company reserves the right to require you to work different hours of work according to the needs of the business, whether on a temporary or a permanent basis. This may involve shorter or longer hours of work, or working on different days of the week or at different times of the day in accordance with operational requirements. It is a condition of your employment that you agree to work different hours if requested to do so by the Company.",
+    "user_message": "What is the purpose of this clause and what type of agreement are we talking about?",
+    "chat_history": "",
+    "expected_output": "Something"
+  },
+  {
+    "document_clauses": "",
+    "user_message": "Whats the weather in spain?",
+    "chat_history": "",
+    "expected_output": "Something"
   }
 ]
