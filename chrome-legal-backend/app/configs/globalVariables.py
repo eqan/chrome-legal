@@ -8,7 +8,7 @@ local_credentials = {
     'PASSWORD': 'pass',
     'HOST': 'localhost',
     'PORT': '5433',
-    'DATABASE': 'gpulab'
+    'DATABASE': 'chrome_legal'
 }
 
 

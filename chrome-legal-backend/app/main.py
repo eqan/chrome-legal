@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from .review.reviewController import router as review_router
-from .database import create_tables
+from app.review.reviewController import router as review_router
+from app.database import create_tables
 import uvicorn
 app = FastAPI()
 
@@ -12,7 +12,7 @@ async def root():
 
 def main():
     create_tables()
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    return
 
 if __name__ == "__main__":
     main()

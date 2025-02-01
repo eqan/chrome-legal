@@ -1,5 +1,5 @@
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
-
+from app.review.reviewService import generate_result
 router = APIRouter()
 
 @router.websocket("/ws")
@@ -8,8 +8,10 @@ async def websocket_endpoint(websocket: WebSocket):
         await websocket.accept()
         print("Client connected")
         while True:
-            data = await websocket.receive_text()
+            data = await websocket.receive_json()
             print(f"Received message: {data}")
-            await websocket.send_json({"name": "Bot", "message": f"Message text was: {data}"})
+            result = generate_result("", data["message"], "")
+            print(f"Result: {result}")
+            await websocket.send_json({"name": "Bot", "message": f"Message text was: {result}"})
     except WebSocketDisconnect:
         print("Client disconnected")

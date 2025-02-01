@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Text, DateTime
-from app.database import Base
+from app.base import Base
 from datetime import datetime
 
 class ScrappedSource(Base):
