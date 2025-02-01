@@ -9,6 +9,9 @@ class Chat extends Component {
   state = {
     name: 'User',
     messages: [],
+    document_clauses: '',
+    document_link: '',
+    user_id: 1,
   }
 
   ws = new WebSocket(URL)
@@ -35,7 +38,7 @@ class Chat extends Component {
     this.setState(state => ({ messages: [message, ...state.messages] }))
 
   submitMessage = messageString => {
-    const message = { name: this.state.name, message: messageString }
+    const message = { name: this.state.name, message: messageString, document_clauses: this.state.document_clauses, document_link: this.state.document_link, user_id: this.state.user_id, chat_history: this.state.messages.toString() }
     this.ws.send(JSON.stringify(message))
     this.addMessage(message)
   }

@@ -10,8 +10,8 @@ async def websocket_endpoint(websocket: WebSocket):
         while True:
             data = await websocket.receive_json()
             print(f"Received message: {data}")
-            result = generate_result("", data["message"], "")
+            result = generate_result("", data["message"], data["chat_history"])
             print(f"Result: {result}")
-            await websocket.send_json({"name": "Bot", "message": f"Message text was: {result}"})
+            await websocket.send_json({"name": "Bot", "message": f"{result}"})
     except WebSocketDisconnect:
         print("Client disconnected")
