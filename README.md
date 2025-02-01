@@ -4,7 +4,7 @@ An AI legal chatbot that provides suggestions and advice based on the legal docu
 
 ## Features:
 - An interactive Chatbot powered by an LLM that uses RAG approaches to discuss in detail opened legal documents whether websites or PDFs on Chrome
-- Data scrapping in real on the website
+- Data scrapping in realtime on the website
 - Native Chrome extension built with React on frontend with Python, and FAST API in the backend.
 
 ## Project Structure:
