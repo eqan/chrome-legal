@@ -14,4 +14,5 @@ The project contains 3 main repos:
 3. Prompt Test & Evaluation Repo: Pytest, Python, Langchain and GPT4-0 Mini.
 
 ## Current Phase Development Picture
-![image](https://github.com/user-attachments/assets/f3b03191-cc70-46fd-8a4b-168638b59f84)
+![image](https://github.com/user-attachments/assets/b86bf85f-4a24-4f74-89be-dd145193c9b1)
+
