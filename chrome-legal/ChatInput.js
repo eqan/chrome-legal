@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 class ChatInput extends Component {
-  static propTypes = {
-    onSubmitMessage: PropTypes.func.isRequired,
-  }
   state = {
     message: '',
   }

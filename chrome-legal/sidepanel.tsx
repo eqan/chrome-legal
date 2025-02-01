@@ -1,4 +1,4 @@
-import App from "./src/App"
+import Chat from "./Chat"
 
 function IndexSidePanel() {
   return (
@@ -8,7 +8,7 @@ function IndexSidePanel() {
         flexDirection: "column",
         padding: 16
       }}>
-      <App />
+      <Chat />
     </div>
   )
 }

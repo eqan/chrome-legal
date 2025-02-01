@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ChatInput from './ChatInput'
 import ChatMessage from './ChatMessage'
+import './index.css'
 
 const URL = 'ws://localhost:8000/ws'
 
