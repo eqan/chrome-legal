@@ -16,6 +16,9 @@
 	width: calc(100% - 30px);
 	padding: 15px;
 	border:1px solid #ccc;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 .panel-chat .message-chat{
 	position: fixed;

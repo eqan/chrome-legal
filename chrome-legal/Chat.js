@@ -21,6 +21,7 @@ class Chat extends Component {
       console.log('connected')
     }
 
+
     this.ws.onmessage = evt => {
       const message = JSON.parse(evt.data)
       this.addMessage(message)
@@ -37,18 +38,30 @@ class Chat extends Component {
   addMessage = message =>
     this.setState(state => ({ messages: [message, ...state.messages] }))
 
-  submitMessage = messageString => {
-    const message = { name: this.state.name, message: messageString, document_clauses: this.state.document_clauses, document_link: this.state.document_link, user_id: this.state.user_id, chat_history: this.state.messages.toString() }
-    this.ws.send(JSON.stringify(message))
-    this.addMessage(message)
+  submitMessage = async messageString => {
+    // Function to get selected text or entire page content
+    const document_clauses = "";
+    console.log("document_clauses", document_clauses);
+
+    const message = {
+      name: this.state.name,
+      message: messageString,
+      document_clauses: document_clauses,
+      document_link: this.state.document_link,
+      user_id: this.state.user_id,
+      chat_history: this.state.messages.toString()
+    };
+
+    this.ws.send(JSON.stringify(message));
+    this.addMessage(message);
   }
 
   render() {
     return (
       <div>
-        <div class="fixed-chat">
-          <div class="panel-chat">
-            <div class="body-chat">
+        <div className="fixed-chat">
+          <div className="panel-chat">
+            <div className="body-chat">
               {this.state.messages.slice(0).reverse().map((message, index) =>
                 <ChatMessage
                   key={index}
@@ -57,7 +70,7 @@ class Chat extends Component {
                 />,
               )}
             </div>
-            <div class="message-chat">
+            <div className="message-chat">
               <ChatInput
                 ws={this.ws}
                 onSubmitMessage={messageString => this.submitMessage(messageString)}
