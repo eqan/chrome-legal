@@ -1,5 +1,5 @@
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
-from app.review.reviewService import generate_result
+from review.reviewService import generate_result
 router = APIRouter()
 
 @router.websocket("/ws")

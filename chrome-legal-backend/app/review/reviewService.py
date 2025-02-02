@@ -3,9 +3,9 @@ import re
 
 from openai import OpenAI
 
-from app.review.prompts.load_prompt import load_prompt
+from review.prompts.load_prompt import load_prompt
 
-from app.review.prompts.settings import Settings
+from review.prompts.settings import Settings
 
 settings = Settings()
 os.environ["OPENAI_API_KEY"] = settings.openai_api_key
