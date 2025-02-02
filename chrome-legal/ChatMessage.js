@@ -13,7 +13,7 @@ export default ({ name, message }) => {
   return (
     <p>
       {name === "User" ? (
-        <div style={{ textAlign: 'right', backgroundColor: 'blue', color: 'white', borderRadius: '15px', padding: '10px', display: 'block', maxWidth: calculateWidth(message), marginLeft: 'auto' }}>
+        <div style={{ textAlign: 'right', backgroundColor: '#26ade4', color: 'white', borderRadius: '15px', padding: '10px', display: 'block', maxWidth: calculateWidth(message), marginLeft: 'auto' }}>
           <em>{message}</em> <span role="img" aria-label="person">👤</span>
         </div>
       ) : (
