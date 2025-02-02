@@ -2,6 +2,7 @@
 
 An AI legal chatbot that provides suggestions and advice based on the legal document you have opened in Chrome.
 
+
 ## Demo:
 https://screenrec.com/share/8VokEFjSzr
 
