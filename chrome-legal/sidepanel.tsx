@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
 import Chat from "./Chat"
+import { GlobalProvider, useGlobalContext } from "./GlobalContext"
 
-function IndexSidePanel() {
-  const [message, setMessage] = useState({})
+function SidePanelContent() {
+  const { setGlobalState } = useGlobalContext()
 
   useEffect(() => {
     const messageListener = (message) => {
@@ -11,13 +12,9 @@ function IndexSidePanel() {
       const { type, text, url } = message || {}
       if (type === "save-text-content") {
         console.log("Information document_clauses", text)
-      }
-
-      if (type) { // Ensure type is defined
-        setMessage({ type, text, url })
+        setGlobalState({ text, url })
         console.log("Updated messages:", message) // Log updated messages
       }
-
       return true
     }
 
@@ -42,4 +39,12 @@ function IndexSidePanel() {
   )
 }
 
-export default IndexSidePanel
+function IndexSidePanel() {
+  return (
+    <GlobalProvider>
+      <SidePanelContent />
+    </GlobalProvider>
+  );
+}
+
+export default IndexSidePanel;

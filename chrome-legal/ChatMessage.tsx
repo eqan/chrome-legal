@@ -1,5 +1,6 @@
-import React from 'react'
-export default ({ name, message }) => {
+import React from 'react';
+
+const ChatMessage = ({ name, message }) => {
   const calculateWidth = (text) => {
     const baseWidth = 40; // base width percentage
     const maxWidth = 46; // max width percentage
@@ -23,4 +24,6 @@ export default ({ name, message }) => {
       )}
     </p>
   );
-}
+};
+
+export default ChatMessage;
