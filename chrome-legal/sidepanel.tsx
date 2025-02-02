@@ -2,20 +2,20 @@ import { useEffect, useState } from "react"
 import Chat from "./Chat"
 
 function IndexSidePanel() {
-  const [messages, setMessages] = useState([])
+  const [message, setMessage] = useState({})
 
   useEffect(() => {
     const messageListener = (message) => {
       console.log("Received message:", message) // Log the entire message
 
-      const { type, text } = message || {}
+      const { type, text, url } = message || {}
       if (type === "save-text-content") {
         console.log("Information document_clauses", text)
       }
 
       if (type) { // Ensure type is defined
-        setMessages(prevMessages => [...prevMessages, { type, text }])
-        console.log("Updated messages:", [...messages, { type, text }]) // Log updated messages
+        setMessage({ type, text, url })
+        console.log("Updated messages:", message) // Log updated messages
       }
 
       return true
