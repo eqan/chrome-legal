@@ -9,9 +9,10 @@ An AI legal chatbot that provides suggestions and advice based on the legal docu
 
 ## Project Structure:
 The project contains 3 main repos:
-1. Frontend: Nextjs, React, Plasmo(Chrome Extension Environment)
+1. Frontend: Nextjs, React, Typescript, Chrome APIs, Plasmo(Chrome Extension Environment)
 2. Backend: Python, UV(Python Package Manager), Pydantic, Websockets, SQL Alchemy, Postgres, Langchain, GPT4-O etc
 3. Prompt Test & Evaluation Repo: Pytest, Python, Langchain and GPT4-0 Mini.
 
 ## Current Phase Development Picture
-![image](https://github.com/user-attachments/assets/2323b1d1-7b45-47b1-84f9-eb99d983c04d)
+![image](https://github.com/user-attachments/assets/0a78ec77-99d5-444d-b7c1-382f74272e0a)
+
